@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import PasswordGenerator from './ccomponents/PasswordGenerator';
 
 function App() {
   return (
-    <div>App</div>
+    <div className="app">
+      <PasswordGenerator />
+    </div>
   )
 }
 
