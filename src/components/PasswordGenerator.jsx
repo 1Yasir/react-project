@@ -44,7 +44,7 @@ function PasswordGenerator() {
               <Form.Control type="text" placeholder="Password" readOnly value={password} />
             </FloatingLabel>
             <div className='d-flex align-items-center justify-content-between'>
-              <div className="range d-flex align-items-center gap-3 w-50">
+              <div className="range d-flex align-items-center gap-3">
                 <Form.Range
                   min="10"
                   max="100"
@@ -80,4 +80,4 @@ function PasswordGenerator() {
   );
 }
 
-export default PasswordGenerator;
+export default React.memo(PasswordGenerator);
