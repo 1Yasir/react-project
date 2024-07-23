@@ -1,5 +1,6 @@
 import React from 'react';
-import PasswordGenerator from './ccomponents/PasswordGenerator';
+import PasswordGenerator from './components/PasswordGenerator';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
