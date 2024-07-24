@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import useFetch from './customHook/useFetch';
 import OnlineStatusCheck from './components/OnlineStatusCheck';
 import Form from './components/Form';
+import CurrencyConverter from './components/currency/CurrencyConverter';
 
 function App() {
   const [data] = useFetch("https://jsonplaceholder.typicode.com/posts");
@@ -14,7 +15,8 @@ function App() {
       {/* <PasswordGenerator /> */}
       {/* <FetchApiData /> */}
       {/* <OnlineStatusCheck /> */}
-      <Form />
+      {/* <Form /> */}
+      <CurrencyConverter />
     </div>
   )
 }

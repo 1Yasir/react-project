@@ -41,3 +41,14 @@ To give users a simple and interactive way to generate passwords according to th
 React comes with several built-in Hooks like useState, useContext, and useEffect. Sometimes, you’ll wish that there was a Hook for some more specific purpose: for example, to fetch data, to keep track of whether the user is online, or to connect to a chat room. You might not find these Hooks in React, but you can create your own Hooks for your application’s needs.
 
 # Custom Hooks: Sharing logic between components 
+
+# Currency Converter
+
+This is a simple Currency Converter application that allows you to convert an amount from one currency to another. The project is built using React and custom hooks.
+
+## Features
+
+- Input field to enter the amount.
+- Dropdowns to select the source and target currencies.
+- Displays the conversion result.
+- Custom scrollbar and max height setting for the currency select options.
