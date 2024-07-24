@@ -12,11 +12,11 @@ function App() {
   // console.log("app", data?.length);
   return (
     <div className="app">
-      {/* <PasswordGenerator /> */}
+      <PasswordGenerator />
       {/* <FetchApiData /> */}
       {/* <OnlineStatusCheck /> */}
       {/* <Form /> */}
-      <CurrencyConverter />
+      {/* <CurrencyConverter /> */}
     </div>
   )
 }
