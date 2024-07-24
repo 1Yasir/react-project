@@ -4,6 +4,7 @@ import FetchApiData from './components/FetchApiData';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import useFetch from './customHook/useFetch';
 import OnlineStatusCheck from './components/OnlineStatusCheck';
+import Form from './components/Form';
 
 function App() {
   const [data] = useFetch("https://jsonplaceholder.typicode.com/posts");
@@ -12,7 +13,8 @@ function App() {
     <div className="app">
       {/* <PasswordGenerator /> */}
       {/* <FetchApiData /> */}
-      <OnlineStatusCheck />
+      {/* <OnlineStatusCheck /> */}
+      <Form />
     </div>
   )
 }
