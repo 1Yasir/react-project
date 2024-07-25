@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './components/header/Header';
 import Home from './components/Home/Home';
 import QuizApplication from './components/quizApplication/QuizApplication';
-
+import SideBar from './components/sidebar/SideBar';
 function App() {
   const [data] = useFetch("https://jsonplaceholder.typicode.com/posts");
   // console.log("app", data?.length);
@@ -24,6 +24,7 @@ function App() {
         <Route path='/password-generator' element = {<PasswordGenerator />} />
         <Route path='/quiz-application' element = {<QuizApplication />} />
         <Route path='/fetch-api' element = {<FetchApiData />} />
+        <Route path='/side-bar' element = {<SideBar />} />
       </Routes>
     </BrowserRouter>
 

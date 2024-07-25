@@ -62,6 +62,16 @@ function Header() {
                                     Fetch API
                                 </NavLink>
                             </li>
+                            <li className="nav-item">
+                                <NavLink 
+                                    className={({ isActive }) => 
+                                        `btn ${isActive ? "btn-outline-primary" : ""}`
+                                    } 
+                                    to="/side-bar"
+                                >
+                                    Side Bar
+                                </NavLink>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
