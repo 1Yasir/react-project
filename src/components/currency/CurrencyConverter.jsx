@@ -3,7 +3,7 @@ import { useCurrencyInfo } from '../../customHook/useCurrencyInfo';
 import './CurrencyConverter.css'; // CSS file import
 
 function CurrencyConverter() {
-    const [amount, setAmount] = useState("");
+    const [amount, setAmount] = useState(0);
     const [from, setFrom] = useState('usd');
     const [to, setTo] = useState('PKR');
     const [convertedAmount, setConvertedAmount] = useState(0);
@@ -41,6 +41,7 @@ function CurrencyConverter() {
                         onChange={handleAmountChange}
                         placeholder="Enter amount"
                         className="input-amount"
+                        min={0}
                     />
                     <select value={from} onChange={handleFromChange} className="currency-select">
                         {options.map((currency) => (

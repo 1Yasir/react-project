@@ -5,7 +5,9 @@ function FetchApiData() {
     const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
 
     return (
-        <div>
+        <div style={{padding :"100px 0"}} className='text-center text-white'>
+
+            <h1>Fetch Api Data && use Custom Hook</h1>
             {
                 true && (
                     data?.map((list, i) => (

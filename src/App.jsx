@@ -19,7 +19,11 @@ function App() {
     <BrowserRouter>
     <Header />
       <Routes>
-        <Route path='/' element = {<QuizApplication />} />
+        <Route path='/' element = {<Home />} />
+        <Route path='/currency-converter' element = {<CurrencyConverter />} />
+        <Route path='/password-generator' element = {<PasswordGenerator />} />
+        <Route path='/quiz-application' element = {<QuizApplication />} />
+        <Route path='/fetch-api' element = {<FetchApiData />} />
       </Routes>
     </BrowserRouter>
 
@@ -27,12 +31,3 @@ function App() {
 }
 
 export default App
-
-
-{/* <div className="app">  */ }
-{/* <PasswordGenerator /> */ }
-{/* <FetchApiData /> */ }
-{/* <OnlineStatusCheck /> */ }
-{/* <Form /> */ }
-{/* <CurrencyConverter /> */ }
-// </div>

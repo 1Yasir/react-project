@@ -6,18 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: rgb(77, 14, 203);
-    background: radial-gradient(circle,
-            rgba(77, 14, 203, 1) 0%,
-            rgba(255, 255, 255, 1) 100%);
-    font-family: "poppins", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-}
 
 .quiz-container {
     background: #fff;
@@ -25,6 +13,10 @@ body {
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 600px;
     margin-top: 56px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
 
 }
 
