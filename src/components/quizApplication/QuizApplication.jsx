@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "./quizApplication.css";
 import { quizData } from './index.quiz';
+import MetaTags from '../commons/MetaTags';
+import { HelmetProvider } from 'react-helmet-async';
 
 function QuizApplication() {
     const [questionNumber, setQuestionNumber] = useState(0);
@@ -27,40 +29,48 @@ function QuizApplication() {
     }
 
     return (
-        <div className="quiz-container" id="quiz">
-            <div className="quiz-header d-flex justify-content-center align-items-center pt-5 position-relative">
-                <strong className=' position-absolute' style={{ left: "10px" }}>
-                    {questionNumber + 1}/{quizData.length}
-                </strong>
-                <h2 className="header-txt">Technology Quiz</h2>
+        <HelmetProvider>
+            <MetaTags
+                title="Quiz Application - Mera React App"
+                description="Yeh mera React application ka QuizApplication page hai"
+                keywords="QuizApplication, react, app"
+            />
+            <div className="quiz-container" id="quiz">
+                <div className="quiz-header d-flex justify-content-center align-items-center pt-5 position-relative">
+                    <strong className=' position-absolute' style={{ left: "10px" }}>
+                        {questionNumber + 1}/{quizData.length}
+                    </strong>
+                    <h2 className="header-txt">Technology Quiz</h2>
+                </div>
+                <div className="quiz-body">
+                    <h2 id="question">{quizData[questionNumber].question}</h2>
+                    <ul>
+                        {['a', 'b', 'c', 'd'].map(option => (
+                            <li key={option}>
+                                <input
+                                    checked={userSelected === option}
+                                    onChange={handleInput}
+                                    value={option}
+                                    type="radio"
+                                    name="answer"
+                                    id={option}
+                                    className="answer"
+                                    disabled={userSelected && userSelected !== option}
+                                />
+                                <label htmlFor={option} id={`${option}_text`}>{quizData[questionNumber][option]}</label>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="quiz-footer text-center">
+                    <div className="quiz-details"></div>
+                    {
+                        userSelected && <button type="button" id="btn" onClick={nextQuestion}>{questionNumber < quizData.length - 1 ? "Next" : "Result"}</button>
+                    }
+                </div>
             </div>
-            <div className="quiz-body">
-                <h2 id="question">{quizData[questionNumber].question}</h2>
-                <ul>
-                    {['a', 'b', 'c', 'd'].map(option => (
-                        <li key={option}>
-                            <input 
-                                checked={userSelected === option} 
-                                onChange={handleInput} 
-                                value={option} 
-                                type="radio" 
-                                name="answer" 
-                                id={option} 
-                                className="answer" 
-                                disabled={userSelected && userSelected !== option} 
-                            />
-                            <label htmlFor={option} id={`${option}_text`}>{quizData[questionNumber][option]}</label>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="quiz-footer text-center">
-                <div className="quiz-details"></div>
-                {
-                    userSelected && <button type="button" id="btn" onClick={nextQuestion}>{questionNumber < quizData.length - 1  ?"Next" : "Result"}</button>
-                }
-            </div>
-        </div>
+        </HelmetProvider>
+
     )
 }
 
